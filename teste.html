@@ -1,60 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elaborated Web Page</title>
-    <style>
-        /* CSS styles can be included in a <style> element in the <head> section */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #666;
-            line-height: 1.5;
-        }
-    </style>
+    <title>Entry Counter</title>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Elaborated Web Page</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="about">
-        <h2>About Us</h2>
-        <p>We are a creative and innovative web development team dedicated to building amazing websites.</p>
-    </section>
-    
-    <section id="services">
-        <h2>Our Services</h2>
-        <ul>
-            <li>Web Design</li>
-            <li>Front-End Development</li>
-            <li>Back-End Development</li>
-        </ul>
-    </section>
-    
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <address>
-            <p>Email: <a href="mailto:contact@example.com">contact@example.com</a></p>
-            <p>Phone: <a href="tel:+123456789">+1 (234) 567-89</a></p>
-        </address>
-    </section>
-    
-    <footer>
-        <p>&copy; 2023 Elaborated Web Page</p>
-    </footer>
+    <h1>Entry Counter</h1>
+    <form id="entryForm">
+        <label for="entry">Enter Something:</label>
+        <input type="text" id="entry" required>
+        <button type="button" onclick="countEntry()">Submit</button>
+    </form>
+    <div id="entryCount">Total Entries: 0</div>
+    <script src="script.js"></script>
 </body>
 </html>
