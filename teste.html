@@ -2,16 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Entry Counter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Counter</title>
+    <script>
+        // Function to increment and display the access count
+        function incrementCount() {
+            // Check if 'count' is already in localStorage
+            if (localStorage.getItem('count')) {
+                // If it exists, parse it and increment by 1
+                let count = parseInt(localStorage.getItem('count')) + 1;
+                localStorage.setItem('count', count);
+                document.getElementById('access-count').textContent = count;
+            } else {
+                // If it doesn't exist, set 'count' to 1 and display it
+                localStorage.setItem('count', 1);
+                document.getElementById('access-count').textContent = 1;
+            }
+        }
+
+        // Execute the incrementCount function when the page loads
+        window.onload = incrementCount;
+    </script>
 </head>
 <body>
-    <h1>Entry Counter v2. mogrovejo</h1>
-    <form id="entryForm">
-        <label for="entry">Enter Something:</label>
-        <input type="text" id="entry" required>
-        <button type="button" onclick="countEntry()">Submit</button>
-    </form>
-    <div id="entryCount">Total Entries: 0</div>
-    <script src="script.js"></script>
+    <h1>Welcome to the Access Counter</h1>
+    <p>You have visited this page <span id="access-count">0</span> times.</p>
 </body>
 </html>
